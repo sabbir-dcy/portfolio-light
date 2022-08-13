@@ -9,33 +9,40 @@ const Navbar = ({ children }) => {
   const [menu, setMenu] = useState(false)
   return (
     <>
-      <div className='bg-blue-600 text-blue-300 sticky top-0 z-20'>
-        <div className='w-4/5 md:w-3/5 mx-auto h-20 flex justify-between items-center'>
-          <div className='rounded-full h-8 w-8 border border-blue-300 flex justify-center items-center hover:text-white hover:border-white transition-colors cursor-pointer' onClick={() => navigate('/')}>sa</div>
-          <div className='space-x-8 hidden md:block'>
+      {
+        !pathname.includes('resume') && <div>
+          <div className='bg-blue-600 text-blue-300 sticky top-0 z-20'>
+            <div className='w-4/5 md:w-3/5 mx-auto h-20 flex justify-between items-center'>
+              <div className='rounded-full h-8 w-8 border border-blue-300 flex justify-center items-center hover:text-white hover:border-white transition-colors cursor-pointer' onClick={() => navigate('/')}>sa</div>
+              <div className='space-x-8 hidden md:block'>
+                <Link to='/' className={`hover:text-white transition-colors ${pathname === '/' && 'text-white'}`}>Home</Link>
+                <Link to='/about' className={`hover:text-white transition-colors ${pathname.includes('/about') && 'text-white'}`}>About</Link>
+                <Link to='/blog' className={`hover:text-white transition-colors ${pathname.includes('/blog') && 'text-white'}`}>Blog</Link>
+                <Link to='/achievements' className={`hover:text-white transition-colors ${pathname.includes('/achievements') && 'text-white'}`}>Achievements</Link>
+              </div>
+              <div className='md:hidden block' onClick={() => setMenu(!menu)}>
+                {
+                  !menu ? <AiOutlineMenu className='text-2xl cursor-pointer' /> : <AiOutlineClose className='text-2xl cursor-pointer' />
+                }
+              </div>
+            </div>
+          </div>
+          <div className={`absolute w-full flex flex-col gap-4 items-center pb-4 transition-all ${!menu && "-translate-y-40"} bg-blue-600 text-blue-300`}>
             <Link to='/' className={`hover:text-white transition-colors ${pathname === '/' && 'text-white'}`}>Home</Link>
             <Link to='/about' className={`hover:text-white transition-colors ${pathname.includes('/about') && 'text-white'}`}>About</Link>
             <Link to='/blog' className={`hover:text-white transition-colors ${pathname.includes('/blog') && 'text-white'}`}>Blog</Link>
             <Link to='/achievements' className={`hover:text-white transition-colors ${pathname.includes('/achievements') && 'text-white'}`}>Achievements</Link>
           </div>
-          <div className='md:hidden block' onClick={() => setMenu(!menu)}>
-            {
-              !menu ? <AiOutlineMenu className='text-2xl cursor-pointer' /> : <AiOutlineClose className='text-2xl cursor-pointer' />
-            }
-          </div>
         </div>
-      </div>
-      <div className={`absolute w-full flex flex-col gap-4 items-center pb-4 transition-all ${!menu && "-translate-y-40"} bg-blue-600 text-blue-300`}>
-        <Link to='/' className={`hover:text-white transition-colors ${pathname === '/' && 'text-white'}`}>Home</Link>
-        <Link to='/about' className={`hover:text-white transition-colors ${pathname.includes('/about') && 'text-white'}`}>About</Link>
-        <Link to='/blog' className={`hover:text-white transition-colors ${pathname.includes('/blog') && 'text-white'}`}>Blog</Link>
-        <Link to='/achievements' className={`hover:text-white transition-colors ${pathname.includes('/achievements') && 'text-white'}`}>Achievements</Link>
-      </div>
+      }
+
       <div className={`w-4/5 md:w-3/5 mx-auto transition-all pt-20`} onClick={() => setMenu(false)}>
         {children}
-        <a href="#top">
-          <button className='bg-blue-600 rounded text-white p-2 text-xl fixed bottom-4 right-0'><BsFillArrowUpSquareFill /></button>
-        </a>
+        {
+          !pathname.includes('resume') && <a href="#top">
+            <button className='bg-blue-600 rounded text-white p-2 text-xl fixed bottom-4 right-0'><BsFillArrowUpSquareFill /></button>
+          </a>
+        }
       </div>
     </>
   );
