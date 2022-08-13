@@ -14,7 +14,7 @@ const Header = () => {
             <button className='h-9 px-6 bg-blue-600 rounded text-white hover:bg-blue-700 transition-colors'
             >contact</button>
           </a>
-          <button className='h-9 px-6 border border-blue-500 rounded text-blue-500 hover:bg-blue-600 hover:text-white transition-colors'
+          <button className='h-9 px-6 text-blue-500 border-b-2 border-blue-200 hover:border-blue-600 transition-colors font-medium'
             onClick={() => navigate('/resume')}
           >resume</button>
         </div>
