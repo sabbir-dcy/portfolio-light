@@ -7,7 +7,7 @@ import Testimonial from '../../components/Home/Testimonial';
 
 const Home = () => {
   return (
-    <div className='pt-20 space-y-8'>
+    <div className='space-y-8'>
       <Header id='top'/>
       <Technology />
       <Testimonial />

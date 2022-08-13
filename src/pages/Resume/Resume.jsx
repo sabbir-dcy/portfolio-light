@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Resume = () => {
   const [resume, setResume] = useState({})
   function createMarkup() {
-    return { __html: resume.resume};
+    return { __html: resume.resume };
   }
 
   useEffect(() => {

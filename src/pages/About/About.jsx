@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='mt-20'>
+    <div className=''>
       <h2 className='text-2xl'>Sabbir Ahmed</h2>
       <p className='mt-2'>I am Sabbir Ahmed. A mern-stack developer with 1 year of development experince with 5 projects. I have been dedicated myself in this field to make creative websites to build a better experience for online world.</p>
       <h2 className='mt-10 text-2xl mb-2'>Background</h2>

@@ -37,7 +37,7 @@ const Projects = () => {
 const SingleProject = ({ project }) => {
   const { name, details, img, link, about } = project
   return <div className='grid xl:grid-cols-3 grid-cols-2 items-center gap-x-8'>
-    <img src={img} className='w-80 border' alt="" />
+    <img src={img} className='w-80 border hover:scale-105 transition-all' alt="" />
     <div className='mt-4 space-y-2 ml-5'>
       <h2 className='text-xl'>{name}</h2>
       <p>{details}</p>
