@@ -18,7 +18,7 @@ const Navbar = ({ children }) => {
                 <Link to='/' className={`hover:text-white transition-colors ${pathname === '/' && 'text-white'}`}>Home</Link>
                 <Link to='/about' className={`hover:text-white transition-colors ${pathname.includes('/about') && 'text-white'}`}>About</Link>
                 <Link to='/blog' className={`hover:text-white transition-colors ${pathname.includes('/blog') && 'text-white'}`}>Blog</Link>
-                <Link to='/achievements' className={`hover:text-white transition-colors ${pathname.includes('/achievements') && 'text-white'}`}>Achievements</Link>
+                <Link to='/experience' className={`hover:text-white transition-colors ${pathname.includes('/experience') && 'text-white'}`}>Experience</Link>
               </div>
               <div className='md:hidden block' onClick={() => setMenu(!menu)}>
                 {
@@ -31,7 +31,7 @@ const Navbar = ({ children }) => {
             <Link to='/' className={`hover:text-white transition-colors ${pathname === '/' && 'text-white'}`}>Home</Link>
             <Link to='/about' className={`hover:text-white transition-colors ${pathname.includes('/about') && 'text-white'}`}>About</Link>
             <Link to='/blog' className={`hover:text-white transition-colors ${pathname.includes('/blog') && 'text-white'}`}>Blog</Link>
-            <Link to='/achievements' className={`hover:text-white transition-colors ${pathname.includes('/achievements') && 'text-white'}`}>Achievements</Link>
+            <Link to='/experience' className={`hover:text-white transition-colors ${pathname.includes('/experience') && 'text-white'}`}>Experience</Link>
           </div>
         </div>
       }
