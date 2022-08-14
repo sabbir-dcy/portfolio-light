@@ -19,13 +19,13 @@ const Header = () => {
           >resume</button>
         </div>
       </div>
-      <div className='relative'>
-        <div className='group w-20 absolute -top-12 -right-8 hover:scale-[2] transition-all duration-500 hover:right-0 ease-in-out z-10'>
+      <div className='group relative'>
+        <div className='group-hover:scale-[2] group w-20 absolute -top-12 -right-8 transition-all duration-500  group-hover:-translate-x-10 group-hover:-translate-y-10 ease-in-out z-10'>
           <div className='absolute w-3 h-3 left-2 top-1 rounded-full animate-ping bg-blue-600 group-hover:hidden'></div>
           <div className='absolute w-3 h-3 left-2 top-1 rounded-full bg-blue-400 group-hover:hidden'></div>
           <img src={dp} alt="" className='rounded-full' />
         </div>
-        <p className=' bg-blue-600 text-white p-8 rounded hover:translate-y-2 transition-all ease duration-300'>Hi! I am Sabbir Ahmed, a mern stack developer with 1 year of experience in web development field. My area of expertise are react, node, tailwind, firebase and mongodb</p>
+        <p className='bg-blue-600 text-white p-8 rounded hover:translate-y-2 transition-all ease duration-300'>Hi! I am Sabbir Ahmed, a mern stack developer with 1 year of experience in web development field. My area of expertise are react, node, tailwind, firebase and mongodb</p>
       </div>
     </div>
   );
